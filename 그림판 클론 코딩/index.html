@@ -1,0 +1,25 @@
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="draw.css">
+    
+<!-- 그림판시작 -->
+        <canvas id="canvas">
+        </canvas>
+        <div class="tools">
+            <!-- 컬러칩 -->
+            <div onclick="change_color(this)" class="color-field" style="background: red;"></div>
+            <div onclick="change_color(this)" class="color-field" style="background: blue;"></div>
+            <div onclick="change_color(this)" class="color-field" style="background: green;"></div>
+            <div onclick="change_color(this)" class="color-field" style="background: yellow;"></div>
+
+             <!-- 컬러피커  -->
+            <input onInput="circle_color= this.value" type="color" class="color-picker" style="width:70px">
+            <!-- 펜굵기 조절 -->
+            <input type="range" min="5" max="150" class="pen-range"
+                  onInput="edge=this.value">
+            <!-- 되리기, 지우기, 다운로드 버튼  -->
+
+            <button onclick="save()" type="button" class="button">다운로드</button>
+        </div>
+
+    <!-- javascript -->
+    <script src="draw.js"></script>
